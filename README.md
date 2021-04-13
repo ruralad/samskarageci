@@ -1,2 +1,2 @@
-# dvaya-api
-api for dvaya.in
+# samskara 
+website for samskara geci
