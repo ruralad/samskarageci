@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon</title>
+    <style>
+      :root {
+        --gradfrom: rgb(1, 155, 194);
+        --gradto: rgb(163, 140, 7);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        width: 100%;
+      }
+      main {
+        display: grid;
+        place-items: center;
+        height: 90vh;
+        text-align: center;
+      }
+      main h1 {
+        font-size: 48px;
+        background: var(--gradfrom);
+        background: -webkit-linear-gradient(
+          top left,
+          var(--gradfrom),
+          var(--gradto)
+        );
+        background: -moz-linear-gradient(
+          top left,
+          var(--gradfrom),
+          var(--gradto)
+        );
+        background: linear-gradient(
+          to bottom right,
+          var(--gradfrom),
+          var(--gradto)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @media (max-width: 500px) {
+        main h1 {
+          margin: 1em;
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>will be live on may 2021</h1>
+    </main>
+  </body>
+</html>
