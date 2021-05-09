@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+main {
+  height: auto;
+  width: 100%;
+
+  font-size: 16px;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+.section-process {
+  --gradient-color-1: #ef008f;
+  --gradient-color-2: #004770;
+  --gradient-color-3: #7038ff;
+  --gradient-color-4: #c9c9c9;
+
+  display: grid;
+  place-items: center;
+  width: 100%;
+
+  padding-top: 10%;
+
+  .process-steps-container {
+    .process-step-container {
+      .process-step-title-container {
+        margin-top: -16px; //To adjust for the line-height
+        position: relative;
+        .process-step-title {
+          color: #f0f0f0;
+        }
+        .process-step-title,
+        .process-step-title-overlay {
+          font-size: 4rem;
+          font-weight: 900;
+          margin: 0;
+          line-height: 1.5em; //If too short, g might get cut off
+          letter-spacing: -3px;
+        }
+
+        .process-step-title-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: auto;
+          padding-right: 30px; //Adding some space on the right otherwise gradient may be cut off depending on the font.
+          height: 100%;
+          opacity: 1;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+        }
+      }
+
+      &.process-step-1 {
+        .process-step-title-overlay {
+          background-image: linear-gradient(
+            90deg,
+            var(--gradient-color-1),
+            var(--gradient-color-2)
+          );
+          animation: animated-gradient-title-1 12s infinite;
+        }
+      }
+
+      &.process-step-2 {
+        .process-step-title-overlay {
+          background-image: linear-gradient(
+            90deg,
+            var(--gradient-color-2),
+            var(--gradient-color-3)
+          );
+          animation: animated-gradient-title-2 12s infinite;
+        }
+      }
+
+      &.process-step-3 {
+        .process-step-title-overlay {
+          background-image: linear-gradient(
+            90deg,
+            var(--gradient-color-3),
+            var(--gradient-color-1)
+          );
+          animation: animated-gradient-title-3 12s infinite ease-out;
+        }
+      }
+    }
+  }
+
+  @keyframes animated-gradient-title-1 {
+    0%,
+    16.667%,
+    100% {
+      opacity: 1;
+    }
+
+    33.333%,
+    83.333% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes animated-gradient-title-2 {
+    0%,
+    16.667%,
+    66.667%,
+    100% {
+      opacity: 0;
+    }
+
+    33.333%,
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes animated-gradient-title-3 {
+    0%,
+    50%,
+    100% {
+      opacity: 0;
+    }
+
+    66.667%,
+    83.333% {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    font-size: 10px;
+  }
+}

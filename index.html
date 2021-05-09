@@ -4,59 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coming Soon</title>
-    <style>
-      :root {
-        --gradfrom: rgb(1, 155, 194);
-        --gradto: rgb(163, 140, 7);
-      }
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        width: 100%;
-      }
-      main {
-        display: grid;
-        place-items: center;
-        height: 90vh;
-        text-align: center;
-      }
-      main h1 {
-        font-size: 48px;
-        background: var(--gradfrom);
-        background: -webkit-linear-gradient(
-          top left,
-          var(--gradfrom),
-          var(--gradto)
-        );
-        background: -moz-linear-gradient(
-          top left,
-          var(--gradfrom),
-          var(--gradto)
-        );
-        background: linear-gradient(
-          to bottom right,
-          var(--gradfrom),
-          var(--gradto)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      @media (max-width: 500px) {
-        main h1 {
-          margin: 1em;
-          font-size: 32px;
-        }
-      }
-    </style>
+    <title>Samskara | Sfi Geci</title>
+    <link rel="stylesheet" href="./public/css/style.css" />
   </head>
   <body>
     <main>
-      <h1>will be live on may 2021</h1>
+      <section class="section-process">
+        <div class="section-container">
+          <div class="process-steps-container container-medium with-padding">
+            <div class="process-step-container process-step-1">
+              <div class="process-step-title-container">
+                <h1 class="process-step-title">സംസ്കാര.</h1>
+                <div class="process-step-title-overlay">സംസ്കാര.</div>
+              </div>
+            </div>
+            <div class="process-step-container process-step-2">
+              <div class="process-step-title-container">
+                <h1 class="process-step-title">SAMSKARA.</h1>
+                <div class="process-step-title-overlay">SAMSKARA.</div>
+              </div>
+            </div>
+            <div class="process-step-container process-step-3">
+              <div class="process-step-title-container">
+                <h1 class="process-step-title">संस्कारा.</h1>
+                <div class="process-step-title-overlay">संस्कारा.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <script src="./public/script.js"></script>
   </body>
 </html>
